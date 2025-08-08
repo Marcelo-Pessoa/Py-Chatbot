@@ -1,0 +1,5 @@
+Flask
+google-genai
+openai
+markdown-it-py
+sift-stack-py
