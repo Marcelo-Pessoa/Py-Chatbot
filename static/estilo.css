@@ -20,13 +20,13 @@ li {
 
 
 #chatbot {
-  height: 780px;
+  height: 100vh;
   width: 100%;
   overflow: hidden;
 }
 
 #messages {
-  height: 90%;
+  height: 80%;
   background-color: rgb(250,250,231);
 }
 
