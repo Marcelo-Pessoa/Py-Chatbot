@@ -29,7 +29,7 @@ function getBotResponse() {
 
   // Adiciona a mensagem do usuário ao chat
   var userHtml =
-      '<li class="d-flex justify-content-between my-4 mx-2 ms-auto w-50"><div class=" bg-primary px-2 py-1 rounded"><span>' +
+      '<li class="d-flex justify-content-between my-4 mx-2 ms-auto w-50"><div class=" bg-primary px-2 py-1 rounded bg-opacity-75"><span>' +
       rawText +
       "</span></div></li>";
   $("#prompt").val("");
@@ -37,7 +37,7 @@ function getBotResponse() {
 
   // Adiciona indicador de carregamento
   var loadingHtml =
-      '<li id="loading" class="d-flex justify-content-between my-4 mx-2 me-auto w-50"><p><em>Processando...</em></p></li>';
+      '<li id="loading" class="d-flex justify-content-between my-4 mx-2 me-auto w-75"><p><em>Processando...</em></p></li>';
   appendMessage(loadingHtml);
 
   // Faz a requisição para o servidor e obtém a resposta do bot
@@ -46,7 +46,7 @@ function getBotResponse() {
           $("#loading").remove();
           data = data.replaceAll("<p>", "<span>").replaceAll("</p>", "</span>");
           var botHtml =
-              '<li class="d-flex justify-content-between my-4 mx-2 me-auto w-50"><div class=" bg-success px-2 py-1 rounded">' +
+              '<li class="d-flex justify-content-between my-4 mx-2 me-auto w-50"><div class=" bg-success px-2 py-1 rounded bg-opacity-75">' +
               data +
               "</div></li>";
           appendMessage(botHtml);
